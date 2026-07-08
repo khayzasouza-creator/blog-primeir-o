@@ -1,0 +1,92 @@
+/* Reset básico para limpar margens padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fundo da página */
+body {
+    background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Card principal */
+.card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 350px;
+    transition: transform 0.3s ease;
+}
+
+/* Efeito ao passar o mouse no card */
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Imagem do card */
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Conteúdo de texto */
+.card-content {
+    padding: 24px;
+}
+
+.card-content h2 {
+    color: #333333;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.card-content p {
+    color: #666666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Botão de Curtir */
+.like-button {
+    background-color: #ff4757;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s, transform 0.1s;
+    width: 100%;
+    justify-content: center;
+}
+
+.like-button:hover {
+    background-color: #ff6b81;
+}
+
+.like-button:active {
+    transform: scale(0.98);
+}
+
+/* Animação simples para o coração */
+.like-button:hover .heart {
+    animation: pulse 0.6s infinite alternate;
+}
+
+@keyframes pulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.2); }
+}

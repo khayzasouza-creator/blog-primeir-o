@@ -1,4 +1,4 @@
-/* Reset básico para limpar margens padrões */
+/*  básico para limpar margens padrões */
 * {
     margin: 0;
     padding: 0;
@@ -89,4 +89,4 @@ body {
 @keyframes pulse {
     from { transform: scale(1); }
     to { transform: scale(1.2); }
-}
+}Reset

@@ -1,17 +1,28 @@
-// Seleciona os elementos da página
+// Selecionando os elementos do HTML
 const likeBtn = document.getElementById('likeBtn');
-const likeCount = document.getElementById('likeCount');
+const likeCountElement = document.getElementById('likeCount');
+const btnText = document.getElementById('btnText');
 
+// Variáveis de controle de estado
 let count = 0;
+let isLiked = false;
 
-// Adiciona o evento de clique
+// Função executada ao clicar no botão
 likeBtn.addEventListener('click', () => {
+  if (!isLiked) {
+    // Ação: Curtir
     count++;
-    likeCount.textContent = count;
-    
-    // Um efeito visual rápido no clique
-    likeBtn.style.transform = 'scale(0.95)';
-    setTimeout(() => {
-        likeBtn.style.transform = 'none';
-    }, 100);
+    isLiked = true;
+    likeBtn.classList.add('liked');
+    btnText.textContent = 'Curtido';
+  } else {
+    // Ação: Descurtir
+    count--;
+    isLiked = false;
+    likeBtn.classList.remove('liked');
+    btnText.textContent = 'Curtir';
+  }
+
+  // Atualiza o valor na tela
+  likeCountElement.textContent = count;
 });

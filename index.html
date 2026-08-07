@@ -1,38 +1,43 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
- <style>
-    header{
-        background-color: bisque;
-        color: black;
-        text-align: center;
-        max-width: 800px;
-        margin: auto;
-        padding: 16px;
-    }
-    main{
-        background-color: blanchedalmond;
-        color: black;
-        max-width: 800px;
-        margin: auto;
-    }
- </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog de Cuidados Pessoais</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-<h1>< titulo principal</h1>
-<p>explicação breve sobre o blog</p>
-</header>
-<main>
-<main>
-    <img src="imagens/cuidados.jpg" alt="Cuidados pessoais" class="card-image">
 
-    <h2>Cuidados Pessoais</h2>
+  <header>
+    <h1>Viva Bem: Cuidados Pessoais</h1>
+    <p>Dicas simples para o seu bem-estar diário</p>
+  </header>
 
-    <p>
-        Os cuidados pessoais ajudam no bem-estar, na saúde e na autoestima.
-    </p>
+  <main class="container">
+    <article class="post">
+      <h2>A Importância do Autocuidado na Rotina</h2>
+      <p class="post-meta">Publicado hoje • Leitura de 2 min</p>
+      
+      <div class="image-container">
+        <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80" alt="Produtos de cuidados pessoais e bem-estar">
+      </div>
+
+      <div class="post-content">
+        <p>Reservar um tempo do dia para cuidar de si mesmo não é luxo, é necessidade. Seja mantendo uma rotina de cuidados com a pele, praticando exercícios ou simplesmente tirando 10 minutos para respirar fundo, o autocuidado melhora sua saúde física e mental.</p>
+        <p>Pequenos hábitos diários constroem grandes transformações a longo prazo!</p>
+      </div>
+
+      <div class="like-section">
+        <button id="likeBtn" class="like-btn">
+          <span class="heart-icon">♥</span> 
+          <span id="btnText">Curtir</span>
+        </button>
+        <span class="like-count"><strong id="likeCount">0</strong> curtidas</span>
+      </div>
+    </article>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
     

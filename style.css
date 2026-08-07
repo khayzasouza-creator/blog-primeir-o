@@ -1,75 +1,106 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glow & Care | Blog de Cuidados Pessoais</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-    <header>
-        <div class="logo">Glow & Care</div>
-        <nav>
-            <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Skincare</a></li>
-                <li><a href="#">Cabelos</a></li>
-                <li><a href="#">Bem-Estar</a></li>
-            </ul>
-        </nav>
-    </header>
+body {
+  background-color: #f4f7f6;
+  color: #333;
+  line-height: 1.6;
+}
 
-    <section class="banner">
-        <h1>Seu Momento de Autocuidado</h1>
-        <p>Dicas simples, rotinas de skincare e hábitos para transformar o seu dia a dia.</p>
-    </section>
+header {
+  background-color: #6b9080;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
 
-    <main class="container">
-        <section class="posts">
-            
-            <article class="card">
-                <h2>5 Passos para uma Rotina de Skincare Noturna</h2>
-                <span class="data">Publicado em 12 de Outubro</span>
-                <p>Descubra como preparar sua pele para a noite com produtos simples que fazem toda a diferença para o seu rosto.</p>
-                <a href="#" class="btn">Ler artigo</a>
-            </article>
+header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
 
-            <article class="card">
-                <h2>Como Cuidar do Cabelo no Verão</h2>
-                <span class="data">Publicado em 10 de Outubro</span>
-                <p>Sol, praia e piscina podem ressecar os fios. Veja dicas valiosas de hidratação para manter os cabelos saudáveis.</p>
-                <a href="#" class="btn">Ler artigo</a>
-            </article>
+.container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
 
-            <article class="card">
-                <h2>Rituais de Bem-Estar para um Dia Produtivo</h2>
-                <span class="data">Publicado em 08 de Outubro</span>
-                <p>Pequenas pausas e hábitos diários que ajudam a reduzir o estresse e aumentar a sua disposição.</p>
-                <a href="#" class="btn">Ler artigo</a>
-            </article>
+.post {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
 
-        </section>
+.post h2 {
+  color: #2c3e50;
+  margin-bottom: 0.3rem;
+}
 
-        <aside class="sidebar">
-            <h3>Sobre o Blog</h3>
-            <p>O **Glow & Care** é um espaço dedicado ao seu bem-estar, com dicas de beleza, autocuidado e rotinas saudáveis.</p>
-            
-            <hr>
-            
-            <h3>Categorias</h3>
-            <ul>
-                <li><a href="#">Pele & Rosto</a></li>
-                <li><a href="#">Cuidados Capilares</a></li>
-                <li><a href="#">Saúde Mental</a></li>
-                <li><a href="#">Alimentação Saudável</a></li>
-            </ul>
-        </aside>
-    </main>
+.post-meta {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 1.2rem;
+}
 
-    <footer>
-        <p>&copy; 2026 Glow & Care - Todos os direitos reservados.</p>
-    </footer>
+.image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  max-height: 350px;
+}
 
-</body>
-</html>
+.post-content {
+  margin: 1.2rem 0;
+  font-size: 1.05rem;
+  color: #4a4a4a;
+}
+
+.post-content p {
+  margin-bottom: 0.8rem;
+}
+
+/* Estilos do Botão de Curtida */
+.like-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.like-btn {
+  background-color: #f0f0f0;
+  color: #555;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.like-btn:hover {
+  background-color: #e0e0e0;
+}
+
+/* Estado quando o post está curtido */
+.like-btn.liked {
+  background-color: #e63946;
+  color: white;
+}
+
+.like-count {
+  font-size: 0.95rem;
+  color: #666;
+}
